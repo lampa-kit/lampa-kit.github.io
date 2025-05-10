@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Lampa Плагины</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="list.js"></script>
+    <style>
+        body {
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            background-image: url("images/gradient.svg");
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-position: 50%;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1, h2, h3{
+            font-family: "Montserrat", sans-serif;
+        }
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        main .header-text{
+            margin-top: 0;
+        }
+
+        .announcement {
+            border: 2px solid #0f0;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* SEARCH */
+        .search-bar {
+            margin: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-bar input{
+            border-radius: 9px;
+            border: 1px solid rgba(132, 204, 22, .6);
+            background: transparent;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .search-bar input:focus{
+            box-shadow: 0 0 43px -13px #00ff493d;
+            outline: none;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 400px;
+            font-size: 21px;
+            font-family: 'Nunito';
+            font-weight: bold;
+        }
+        /* TABS */
+        .tabs {
+            display: flex;
+            
+            margin-bottom: 20px;
+        }
+
+        #overflow-mobile{
+            display: flex;
+            width: 100%;
+            overflow-x: auto;
+            max-width: 1147px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: rgb(55 65 81 / 0.3);
+            color: #fff;
+            margin-right: 10px;
+            border-radius: 5px 5px 0 0;
+            user-select: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            border: 1px solid #3a3a3ad4;
+            cursor: pointer;
+            touch-action: manipulation;
+            text-wrap-mode: nowrap;
+            -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+        }
+        .tab.active {
+            background-color: #1a1a1a;
+            color: #00e300;
+            border: 1px solid rgba(132, 204, 22, .6);
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filters label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .filters input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        /* CARD */
+        .card {
+            position: relative;
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            padding: 20px;
+            border-radius: .5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgb(55 65 81 / 0.3);
+            border: 1px solid transparent;
+        }
+        .card:hover{
+            border: 1px solid rgba(132, 204, 22, .6);
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .card h3 {
+            display: flex;
+            align-items: center;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .card p {
+            margin: 10px 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .card .actions {
+            position: relative;
+            display: flex;
+            gap: 10px;
+        }
+        .card .actions span {
+            border: 1px solid #555555;
+            padding: 3px 13px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+            background: rgb(0 0 0 / 38%);
+            color: wheat;
+        }
+
+        .card .isAlive{
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            width: 14px;
+            height: 14px;
+            background-color: grey;
+            border-radius: 50%;
+        }
+
+        .green{
+            background-color: green !important;
+        }
+
+        .red{
+            background-color: red !important;
+        }
+
+        .card .actions button:hover {
+            background-color: #0d0;
+        }
+        .card .actions img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background-color: #151515c9;
+            color: lightgrey;
+            padding: 7px 12px;
+            border-radius: 9px;
+            font-size: 15px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+            backdrop-filter: blur(9px);
+            border: 1px solid #3a3a3ad4;
+        }
+
+        .tooltip.show-tooltip {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* Треугольник сверху */
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 38px;
+            transform: translateX(-50%);
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent #121212cf transparent;
+        }
+
+        .tooltip .tooltip-span{
+            display: inline-block;
+            /* border: 1px solid grey; */
+            padding: 2px 9px;
+            border-radius: 6px;
+            color: wheat;
+            
+        }
+
+        .tooltip .tooltip-span:hover{
+            background-color: #3535359e;
+        }
+
+        .tooltip div{
+            text-wrap-mode: nowrap;
+            margin: 3px 0;
+        }
+
+
+        /*MOBILE*/
+
+        @media only screen and (max-width: 600px) {
+            .logo h1{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" style="color: white; text-decoration: none;">
+            <div class="logo">
+                <img src="images/logo-icon.svg" alt="Logo">
+                <h1>Lampa Плагины</h1>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Поддержка</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- <div class="announcement">
+            <i class="fas fa-book"></i> Service Review<br>
+            read the silent.link service review
+        </div> -->
+        <h2 class="header-text" style="text-align: center;">Список плагинов для онлайн-кинотеатра Lampa</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Поиск плагинов...">
+        </div>
+        <div class="tabs" id="tabsContainer">
+            <div id="overflow-mobile"></div>
+        </div>
+        <!-- <div class="filters">
+            <label><input type="checkbox"> XMR</label>
+            <label><input type="checkbox"> BTC</label>
+            <label><input type="checkbox"> LN</label>
+            <label><input type="checkbox"> FIAT</label>
+            <label><input type="checkbox"> CASH</label>
+            <button onclick="applyFilters()">FILTER</button>
+        </div> -->
+        <div class="card-grid" id="cardGrid"></div>
+    </main>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const cardGrid = document.getElementById('cardGrid');
+        const tabsContainer = document.getElementById('tabsContainer');
+        const overflowMobileDiv = document.getElementById('overflow-mobile');
+        
+
+        
+
+        // Function to generate tabs from JSON
+        function generateTabs() {
+            jsonData.tabs.forEach(tab => {
+                const tabElement = document.createElement('div');
+                tabElement.classList.add('tab');
+                tabElement.textContent = tab.name;
+                tabElement.setAttribute('data-category', tab.id);
+                tabElement.onmousedown = () => switchTab(tab.id);
+                if (tab.id === 'all') {
+                    tabElement.classList.add('active');
+                }
+                
+                overflowMobileDiv.appendChild(tabElement);
+                
+            });
+            tabsContainer.appendChild(overflowMobileDiv);
+        }
+
+        // Function to generate cards from JSON
+        function generateCards() {
+            jsonData.cards.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                cardElement.setAttribute('data-category', card.categories.join(' '));
+
+                const titleElement = document.createElement('h3');
+                titleElement.textContent = card.title;
+
+                const descriptionElement = document.createElement('p');
+                descriptionElement.textContent = card.description;
+
+                const actionsElement = document.createElement('div');
+                actionsElement.classList.add('actions');
+                const isAlive = document.createElement('div');
+                isAlive.className = 'isAlive';
+                
+
+                const copyButton = document.createElement('span');
+                copyButton.textContent = 'Адреса';
+                copyButton.setAttribute('data-link', card.link);
+                copyButton.setAttribute('data-link-hint', card.link_hint);
+                
+                
+                
+
+                
+
+                // checkFileExists(card.link)
+                //         .then(exists => {
+                //             if (exists) {
+                //                 console.log('Файл доступен!');
+                //                 isAlive.classList.add('green')
+                //                 isAlive.title = 'Доступен'
+                //             } else {
+                //                 console.log('Файл НЕ доступен.');
+                //                 isAlive.classList.add('red')
+                //                 isAlive.title = 'Не доступен'
+                //             }
+                //         });
+                
+                actionsElement.appendChild(copyButton);
+                
+                
+                cardElement.appendChild(titleElement);
+                cardElement.appendChild(descriptionElement);
+                cardElement.appendChild(actionsElement);
+                cardElement.appendChild(isAlive);
+
+                cardGrid.appendChild(cardElement);
+            });
+
+            // Показываем tooltip при наведении
+            let customTooltip = null;
+            document.addEventListener('click', function(e) {
+                let links = [];
+                if (e.target.matches('.actions span')) {
+                    customTooltip = document.createElement('div');
+                    customTooltip.id = 'customTooltip';
+                    customTooltip.className ='tooltip';
+
+                    links = e.target.getAttribute('data-link').split(',');
+                    const link_hints = e.target.getAttribute('data-link-hint').split(',');
+
+                    for (i in links){
+                        customTooltip.innerHTML += `<div><div class="tooltip-span">${links[i]}</div> ${link_hints == 'undefined' || link_hints == '' ? '' : link_hints[i]}</div>\n`;
+                    }
+
+
+
+                    // Позиционируем tooltip под кнопкой по центру
+                    const rect = e.target.getBoundingClientRect();
+                    customTooltip.style.left = '0';
+                    customTooltip.style.top = '38px';
+
+                    customTooltip.classList.add('show-tooltip');
+
+                    e.target.appendChild(customTooltip);
+                }
+
+                if (e.target.matches('.actions .tooltip-span')) {
+                    setTimeout(function(){
+                        document.execCommand("copy");
+                    }, 10);
+                    
+                    console.log('click');
+                    customTooltip.addEventListener("copy", function(event) {
+                        console.log('copy');
+                        console.log(e.target.textContent);
+                        event.preventDefault();
+                        if (event.clipboardData) {
+                            event.clipboardData.setData("text/plain", e.target.textContent);
+                            
+                        }
+                    });
+                    // copyButton.addEventListener('click', (e) => {
+                    //     // e.clipboardData.setData("text/plain", "fsdfd");
+                        
+                    // });
+                }
+            });
+
+            // Скрываем tooltip при уводе мыши
+            document.addEventListener('mouseout', function(e) {
+                if (customTooltip && customTooltip.classList.contains('show-tooltip') && !customTooltip.contains(e.relatedTarget) && !e.target.closest('.actions span')) {
+                    customTooltip.classList.remove('show-tooltip');
+                    customTooltip.remove();
+
+                    console.log(customTooltip)
+                }
+                
+                setTimeout(function(){
+                    
+                    if(customTooltip){
+                        // customTooltip.remove()
+                    }
+                }, 500)
+            });
+        }
+
+        // Search functionality
+        searchInput.addEventListener('input', () => {
+            let tab = document.querySelector('.tab');
+            console.log(tab.className);
+            if(tab.className !== 'tab active'){
+                switchTab('all')
+            }
+            
+            const query = searchInput.value.toLowerCase();
+            Array.from(cardGrid.children).forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const link = card.querySelector('span').getAttribute('data-link');
+                if (title.includes(query) || description.includes(query) || link.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Tab switching functionality
+        function switchTab(category) {
+            if(category !== 'all'){
+                searchInput.value = '';
+            }
+            
+            // Удаляем active у всех табов
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+
+            // Находим нужный таб по data-category
+            const selectedTab = document.querySelector(`.tab[data-category="${category}"]`);
+
+            // Проверяем, найден ли элемент
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+
+            // Фильтруем карточки
+            document.querySelectorAll('.card').forEach(card => {
+                const cardCategories = card.getAttribute('data-category');
+                if (category === 'all' || (cardCategories && cardCategories.includes(category))) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Generate tabs and cards
+        generateTabs();
+        generateCards();
+
+
+
+    async function checkFileExists(url) {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 5000); // Таймаут 5 секунд
+
+        const tryRequest = async (method, mode = 'cors', signal) => {
+            try {
+                const response = await fetch(url, { method, mode, signal });
+                clearTimeout(timeout);
+                return response.ok;
+            } catch (err) {
+                return false;
+            }
+        };
+        // Шаг 1: Попробовать HEAD с CORS
+        let exists = await tryRequest('HEAD', 'cors', controller.signal);
+        if (exists) return true;
+        // Шаг 2: Попробовать HEAD без CORS
+        exists = await tryRequest('HEAD', 'no-cors');
+        if (exists) return true;
+        // Шаг 3: Попробовать GET (только метаданные)
+        exists = await tryRequest('GET', 'cors', controller.signal);
+        if (exists) return true;
+
+        return false; // Файл недоступен или не существует
+    }
+    </script>
+</body>
+</html>
