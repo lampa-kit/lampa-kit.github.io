@@ -3,6 +3,18 @@ const cardGrid = document.getElementById('cardGrid');
 const tabsContainer = document.getElementById('tabsContainer');
 const overflowMobileDiv = document.getElementById('overflow-mobile');
 
+// Переменная для хранения данных из articles.js
+let articlesData = null;
+
+// Элемент для отображения количества плагинов
+const pluginCounter = document.createElement('div');
+pluginCounter.className = 'plugin-counter';
+pluginCounter.textContent = 'Количество плагинов: 0';
+
+// Вставляем pluginCounter перед cardGrid, используя родителя cardGrid
+const cardGridParent = cardGrid.parentNode; // Находим родителя cardGrid
+cardGridParent.insertBefore(pluginCounter, cardGrid);
+
 // Проверяет существование файла по URL с таймаутом и резервными методами
 async function checkFileExists(url) {
     const controller = new AbortController();
@@ -56,7 +68,9 @@ function generateCards() {
         const cardElement = createCardElement(card);
         cardGrid.appendChild(cardElement);
     });
+    updatePluginCounter(); // Обновляем счетчик после генерации карточек
     setupTooltipEvents();
+    setupModalEvents();
 }
 
 // Создает отдельный элемент карточки
@@ -64,6 +78,7 @@ function createCardElement(card) {
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
     cardElement.setAttribute('data-category', card.categories.join(' '));
+    cardElement.setAttribute('data-id', card.id); // Добавляем id для связи с articles.js
 
     const titleElement = document.createElement('h3');
     titleElement.textContent = card.title;
@@ -198,6 +213,82 @@ function removeTooltip(tooltip) {
     }, 500);
 }
 
+// Настраивает обработчики событий для модального окна
+function setupModalEvents() {
+    document.addEventListener('click', async (e) => {
+        const card = e.target.closest('.card');
+        const elemClassName = e.target.className;
+        console.log(elemClassName)
+        if (elemClassName === 'copy-button' || elemClassName.includes('tooltip')) return;
+        if (!card) return;
+
+        const cardId = card.getAttribute('data-id');
+        if (!cardId) return;
+
+        // Загружаем articles.js как скрипт только один раз
+        if (!articlesData) {
+            return new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'articles.js';
+                script.onload = () => {
+                    articlesData = articlesJson; // Доступ к объекту после загрузки
+                    console.log('Загружено articles.js');
+                    showExpandCardContent()
+                    resolve();
+                };
+                script.onerror = () => {
+                    console.error('Ошибка загрузки articles.js');
+                    resolve();
+                };
+                document.body.appendChild(script);
+            });
+        }
+
+        // Находим статью по id
+        function showExpandCardContent(){
+            const article = articlesData.article.find(item => item.id === cardId);
+            if (!article) {
+                console.error('Статья не найдена для id:', cardId);
+                return;
+            }
+
+            // Создаем модальное окно
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+
+            const modalContent = document.createElement('div');
+            modalContent.className = 'modal-content';
+        
+            const closeButton = document.createElement('span');
+            closeButton.className = 'modal-close';
+            closeButton.innerHTML = '×';
+            
+
+            const closeDiv = document.createElement('div');
+            closeDiv.className = 'modal-close-div';
+
+            const content = document.createElement('div');
+            content.className = 'modal-body';
+            content.innerHTML = article.text;
+
+            closeDiv.appendChild(closeButton);
+            modalContent.appendChild(closeDiv);
+            modalContent.appendChild(content);
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+
+            // Закрытие модального окна
+            closeDiv.onclick = () => modal.remove();
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+        }
+
+        showExpandCardContent();
+        
+    });
+}
+
 // Настраивает поиск для фильтрации карточек
 function setupSearch() {
     searchInput.addEventListener('input', () => {
@@ -215,6 +306,7 @@ function setupSearch() {
                 ? 'block' 
                 : 'none';
         });
+        updatePluginCounter(); // Обновляем счетчик при поиске
     });
 }
 
@@ -236,6 +328,15 @@ function switchTab(category) {
             ? 'block' 
             : 'none';
     });
+    updatePluginCounter(); // Обновляем счетчик при переключении таба
+}
+
+// Обновляет счетчик количества видимых плагинов
+function updatePluginCounter() {
+    const visibleCards = Array.from(cardGrid.children).filter(card => 
+        card.style.display !== 'none' && card.classList.contains('card')
+    );
+    pluginCounter.textContent = `Количество плагинов: ${visibleCards.length}`;
 }
 
 // Инициализирует приложение
@@ -243,6 +344,7 @@ function init() {
     generateTabs();
     generateCards();
     setupSearch();
+    updatePluginCounter(); // Инициализируем счетчик
 }
 
 init();

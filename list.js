@@ -12,6 +12,19 @@ const jsonData = {
     cards: [
         // ------------------------ Интерфейс ----------------------
         {
+            id: 'pirat_plagini',
+            title: 'Пиратские плагины',
+            description: `Кто просил альтернативный магазин? 
+                          Держите!!! 
+                          https://skaztv.online/store.js
+                          Спасибо за разработку @rik_krevetka 
+                          Поддерживать в актуальном состоянии будет @elenatv99`,
+            link: ['https://skaztv.online/store.js'],
+            link_hint: ['(для любой Lampa)'],
+            categories: ['all', 'interface']
+             
+        },
+        {
             id: 'tmdb_proxy',
             title: 'TMDB Proxy',
             description: 'Если Вы видите надпись «Здесь пусто» или в постерах название без картинок, то этот плагин для Вас.',
@@ -25,6 +38,38 @@ const jsonData = {
             description: 'В настройках добавляет пункт Tweak & Tricks. Там можно добавлять категории в левом меню и немого менять интерфейс Lampa. Что-то работает, что-то глючит. На любителя.',
             link: ['https://skaztv.online/js/tricks.js', 'https://andreyurl54.github.io/diesel5/tricks.js'],
             link_hint: ['(Lampa от разработчиков)', '(Lampa UNCENSORED)'],
+            categories: ['all', 'interface']
+        },
+        {
+            id: 'udalenie_treilerov_add_youtube',
+            title: 'Удаление трейлеров',
+            description: 'Удаляет Трейлеры, добавляет YouTube.',
+            link: ['http://llpp.in/anti.js'],
+            link_hint: [],
+            categories: ['all', 'interface']
+        },
+        {
+            id: 'udalenie_treilerov_i_anime',
+            title: 'Удаление Трейлеры/Аниме',
+            description: 'Удаляет Трейлеры и Аниме раздел',
+            link: ['http://llpp.in/ot.js'],
+            link_hint: [],
+            categories: ['all', 'interface']
+        },
+        {
+            id: 'udalenie_anime',
+            title: 'Удаление Аниме',
+            description: 'Удаляем раздел Аниме',
+            link: ['http://llpp.in/ur/noanime.js'],
+            link_hint: [],
+            categories: ['all', 'interface']
+        },
+        {
+            id: 'udalenie_treilerov',
+            title: 'Удаление трейлеров',
+            description: 'Удаляет Трейлеры',
+            link: ['http://llpp.in/ur/notrailer.js'],
+            link_hint: [],
             categories: ['all', 'interface']
         },
         {
@@ -149,14 +194,6 @@ const jsonData = {
         },
         {
             id: 'remove_ts_1',
-            title: 'Remove TS',
-            description: 'Убирает с главного экрана постеры (карточки) с качеством TS (экранки).',
-            link: ['http://193.233.134.21/plugins/nots'],
-            link_hint: ['(для любой Lampa)'],
-            categories: ['all', 'interface']
-        },
-        {
-            id: 'remove_ts_2',
             title: 'Remove TS',
             description: 'Убирает с главного экрана постеры (карточки) с качеством TS (экранки).',
             link: ['http://193.233.134.21/plugins/nots'],
@@ -333,14 +370,6 @@ const jsonData = {
         },
         {
             id: 'statistika_1',
-            title: 'Статистика',
-            description: 'После установки плагина в Настройках (шестерёнка) появится пункт Статистика. Требуется время для формирования статистики (просто пользуйтесь Лампой как обычно в течение некоторого времени). Итоги года доступны с 14 декабря по 15 января.',
-            link: ['https://and7ey.github.io/lampa/stats.js'],
-            link_hint: ['(для любой Lampa)'],
-            categories: ['all', 'interface']
-        },
-        {
-            id: 'statistika_2',
             title: 'Статистика',
             description: 'После установки плагина в Настройках (шестерёнка) появится пункт Статистика. Требуется время для формирования статистики (просто пользуйтесь Лампой как обычно в течение некоторого времени). Итоги года доступны с 14 декабря по 15 января.',
             link: ['https://and7ey.github.io/lampa/stats.js'],
@@ -648,6 +677,15 @@ const jsonData = {
             categories: ['all', 'tv']
         },
         // ----------------------------RADIO--------------------------------
+        
+        {
+            id: 'radio_bwa',
+            title: 'Радио BWA',
+            description: 'Радио BWA.',
+            link: ['https://bwa.to/r'],
+            link_hint: [],
+            categories: ['all', 'radio']
+        },
         {
             id: 'radio_record',
             title: 'Радио Record',
@@ -685,7 +723,7 @@ const jsonData = {
             id: 'klubnichka',
             title: 'Клубничка',
             description: 'После установки плагина в левом меню появляется пункт Клубничка. Можно просматривать контент с ресурсов Pornhub, Xvideos, Xhamster, Ebalovo, Hqporner, Spankbang, Eporner, Porntrex, Xnxx, Chaturbate.',
-            link: ['https://bwa.to/s'],
+            link: ['https://bwa.to/s', 'http://bwa.to/re'],
             link_hint: ['(Lampa от разработчиков)'],
             categories: ['all', 'strawberry']
         },
