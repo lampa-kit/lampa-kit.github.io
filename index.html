@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampa Плагины - Список плагинов для онлайн-кинотеатра Lampa</title>
+    <meta name="description" content="Список плагинов для онлайн-кинотеатра Lampa. Найдите и установите лучшие плагины от разработчиков для просмотра фильмов и сериалов.">
+    <meta name="keywords" content="Lampa плагины, онлайн-кинотеатр Lampa, плагины для Lampa, установка плагинов Lampa, смотреть фильмы онлайн">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Lampa Плагины">
+    <meta property="og:title" content="Lampa Плагины - Лучшие плагины для онлайн-кинотеатра Lampa">
+    <meta property="og:description" content="Ознакомьтесь с каталогом плагинов для Lampa, чтобы улучшить ваш опыт просмотра фильмов и сериалов онлайн.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lampa-kit.github.io/">
+    <meta property="og:image" content="https://yumata.github.io/lampa/icons/apple-touch-icon.png">
+    <meta property="og:site_name" content="Lampa Плагины">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lampa Плагины - Каталог плагинов для Lampa">
+    <meta name="twitter:description" content="Найди лучшие плагины для онлайн-кинотеатра Lampa и наслаждайся просмотром фильмов и сериалов.">
+    <meta name="twitter:image" content="https://yumata.github.io/lampa/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://yumata.github.io/lampa/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yumata.github.io/lampa/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yumata.github.io/lampa/icons/favicon-16x16.png">
+    <link rel="canonical" href="https://lampa-kit.github.io/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="list.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Lampa Плагины",
+        "url": "https://lampa-kit.github.io/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://lampa-kit.github.io/#{search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "description": "Каталог плагинов для онлайн-кинотеатра Lampa. Найдите и установите плагины для удобного просмотра фильмов и сериалов."
+    }
+    </script>
+
+</head>
+<body>
+    <header>
+        <a href="/" style="color: white; text-decoration: none;">
+            <div class="logo">
+                <img src="images/logo-icon.svg" alt="Logo">
+                <h1>Lampa Плагины</h1>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="sources.html">Источники</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://t.me/lampa_kit">Поддержка</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="header-text" style="text-align: center;">Список плагинов для онлайн-кинотеатра Lampa</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Поиск плагинов от разработчиков">
+        </div>
+        <div id="tabsContainer" class="tabs-container">
+            <div id="overflow-mobile" class="swiper">
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+        <div>
+        <!-- <div class="plugin-counter">Количество плагинов: 0</div> -->
+        <div class="card-grid" id="cardGrid"></div>
+    </main>
+</body>
+</html>

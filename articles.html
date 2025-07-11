@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 150px;
+            box-sizing: border-box;
+            
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        
+    </style>
+    <script>
+        const jsonData = {
+            article: [
+                {
+                    id: 'tmdb_proxy',
+                    text: `<h3 class="wp-block-heading" id="1-tmdb-proxy">TMDB Proxy</h3>
+
+
+
+<p>Если Вы видите надпись «Здесь пусто» или в постерах название без картинок, то этот плагин для Вас.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="960" height="610" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-9.png" alt="Lampa без постеров" class="wp-image-19201" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-9.png 960w, https://tv-ch.ru/wp-content/uploads/2024/12/image-9-768x488.png 768w" sizes="(max-width: 960px) 100vw, 960px"><figcaption class="wp-element-caption">Lampa без постеров</figcaption></figure>
+
+
+
+<p>Для решения проблемы нужно установить один их плагинов TMDB Proxy:</p>
+
+
+
+                    <p><a href="https://plugin.rootu.top/tmdb.js" target="_blank" rel="noopener">https://plugin.rootu.top/tmdb.js</a> (для любой Lampa)<br><a href="https://cub.red/plugin/tmdb-proxy" class="broken_link" target="_blank" rel="noopener">https://cub.red/plugin/tmdb-proxy</a> (Lampa от разработчиков)<br><a href="https://bylampa.github.io/tmdb-proxy.js" target="_blank" rel="noopener">https://bylampa.github.io/tmdb-proxy.js</a> (Lampa UNCENSORED)</p>
+
+
+
+                    <p>На старых устройствах пишите <strong>http</strong> вместо <strong>https</strong>.</p>
+
+
+
+                    <p>Если знаете ещё адреса, пишите в комментариях.</p>
+
+
+
+                    <p><strong>Внимание!</strong> После установки зайдите в <strong>Настройки</strong>, выберите <strong>Остальное</strong> и убедитесь, что в пункте <strong>Основной источник</strong> стоит <strong>TMDB</strong>. Источник CUB уже давно не работает.</p>`
+                },
+                {
+                    id: 'priyatnye_melochi',
+                    text: 'В настройках добавляет пункт Tweak & Tricks. Там можно добавлять категории в левом меню и немого менять интерфейс Lampa. Что-то работает, что-то глючит. На любителя.'
+                }
+            ]
+        };
+
+        window.onload = function() {
+            const hash = window.location.hash.substring(1); // Получаем id из URL (например, #tmdb_proxy)
+            const article = jsonData.article.find(item => item.id === hash);
+
+            const container = document.querySelector('.container');
+            if (article) {
+                container.innerHTML = `<div class="article-content">${article.text}</div>`;
+            } else {
+                container.innerHTML = '<h1>Статья не найдена</h1>';
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Контент будет динамически подгружаться здесь -->
+    </div>
+</body>
+</html>

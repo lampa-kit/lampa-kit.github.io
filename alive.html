@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lampa Плагины</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://yumata.github.io/lampa/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yumata.github.io/lampa/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yumata.github.io/lampa/icons/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="list.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="/" style="color: white; text-decoration: none;">
+            <div class="logo">
+                <img src="images/logo-icon.svg" alt="Logo">
+                <h1>Lampa Плагины</h1>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://t.me/lampa_kit">Поддержка</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="header-text" style="text-align: center;">Список плагинов для онлайн-кинотеатра Lampa</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Поиск плагинов от разработчиков">
+        </div>
+        <div id="tabsContainer" class="tabs-container">
+            <div id="overflow-mobile" class="swiper">
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+        <div>
+        <!-- <div class="plugin-counter">Количество плагинов: 0</div> -->
+        <div class="card-grid" id="cardGrid"></div>
+    </main>
+    <script>
+        let arr = []
+        for (card of jsonData.cards){
+            console.log(card.link)
+            arr.push(card.link)
+        }
+        arr = arr.flat()
+        console.log(arr)
+
+
+        async function checkScriptsAvailability(urls) {
+    const results = {};
+
+    async function checkUrl(url) {
+        return new Promise((resolve) => {
+            // Сначала проверяем через fetch для редиректов
+            fetch(url, { method: 'GET', mode: 'no-cors' })
+                .then(response => {
+                    if (response.redirected || response.status === 302 || response.status === 307) {
+                        results[url] = 200; // Редиректы считаем как 200
+                        resolve();
+                    } else {
+                        // Если не редирект, проверяем через <link>
+                        checkWithLink(url, resolve);
+                    }
+                })
+                .catch(() => {
+                    // При ошибке fetch проверяем через <link>
+                    checkWithLink(url, resolve);
+                });
+        });
+    }
+
+    async function checkWithLink(url, resolve) {
+        const link = document.createElement('link');
+        const timeout = setTimeout(() => {
+            results[url] = 'timeout';
+            link.remove();
+            resolve();
+        }, 5000);
+
+        link.rel = 'prefetch';
+        link.href = url;
+
+        link.onload = () => {
+            clearTimeout(timeout);
+            results[url] = 200; // Успешная загрузка
+            link.remove();
+            resolve();
+        };
+
+        link.onerror = () => {
+            clearTimeout(timeout);
+            results[url] = 404; // Ошибка
+            link.remove();
+            resolve();
+        };
+
+        document.head.appendChild(link);
+    }
+
+    await Promise.all(urls.map(url => checkUrl(url)));
+    return results;
+}
+
+        checkScriptsAvailability(arr).then(results => {
+            console.log(results)
+            // const isAliveElement = cardElement.querySelector('.isAlive');
+            // const hasSuccess = Object.values(results).includes(200);
+            // isAliveElement.classList.add(hasSuccess ? 'isAlive-green' : 'isAlive-red');
+        });
+    </script>
+</body>
+</html>
