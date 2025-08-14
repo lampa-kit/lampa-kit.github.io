@@ -1,5 +1,6 @@
 const articlesJson = {
     article: [
+    /////////////// Interface //////////////
         {
             id: 'tmdb_proxy',
             text: `<h3 class="wp-block-heading" id="1-tmdb-proxy">TMDB Proxy</h3>
@@ -79,6 +80,666 @@ const articlesJson = {
 <p><a href="http://193.233.134.21/plugins/mult.js" target="_blank">http://193.233.134.21/plugins/mult.js</a> (для любой Lampa)</p>`
         },
         {
+            id: 'kollektsii',
+            text: `<h3 class="wp-block-heading" id="7-kollektsii">Коллекции</h3>
+<p>Добавляет в левое меню пункт Коллекции. От себя скажу, подборки не плохие. Рекомендую, если памяти на вашем устройстве достаточно.</p>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1226" height="658" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-17.png" alt="Коллекции" class="wp-image-19221" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-17.png 1226w, https://tv-ch.ru/wp-content/uploads/2024/12/image-17-768x412.png 768w" sizes="auto, (max-width: 1226px) 100vw, 1226px"><figcaption class="wp-element-caption">Коллекции</figcaption></figure>
+<p>Адрес плагина:</p>
+<p class="has-vivid-red-color has-text-color has-link-color wp-elements-50fdc3554be667426549995bbc1a4037">https://cub.red/plugin/collections (для любой Lampa)<br>Проверил 23.06.2025г., перестал грузится.</p>`
+        },
+
+        {
+            id: 'pogoda',
+            text: `<h3 class="wp-block-heading" id="8-pogoda">Погода</h3>
+
+
+
+<p>На месте часов, время от времени будет показываться погода.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="722" height="573" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-18.png" alt="Погода" class="wp-image-19222"><figcaption class="wp-element-caption">Погода</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/weather.js" target="_blank" rel="noopener">https://bylampa.github.io/weather.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'cub_off',
+            text: `<h3 class="wp-block-heading" id="9-cub-off">Cub Off</h3>
+
+
+
+<p>Плагин убирает элементы, предлагающие оформить CUB Premium.</p>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/cub_off.js" target="_blank" rel="noopener">https://bylampa.github.io/cub_off.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'stilnyy_interfeis',
+            text: `<h3 class="wp-block-heading" id="10-stilnyy-interfeys">Стильный интерфейс</h3>
+
+
+
+<p>Плагин делает интерфейс Lampa похожий на КиноПоиск и Netflix.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1017" height="777" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-19.png" alt="Стильный интерфейс" class="wp-image-19223" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-19.png 1017w, https://tv-ch.ru/wp-content/uploads/2024/12/image-19-768x587.png 768w" sizes="auto, (max-width: 1017px) 100vw, 1017px"><figcaption class="wp-element-caption">Стильный интерфейс</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="http://cub.red/plugin/cardify" target="_blank" rel="noopener">http://cub.red/plugin/cardify</a> (Lampa от разработчиков)<br><a href="https://bylampa.github.io/interface.js" target="_blank" rel="noopener">https://bylampa.github.io/interface.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'dopolnitelnye_kategorii',
+            text: `<h3 class="wp-block-heading" id="11-dopolnitelnye-kategorii">Дополнительные категории</h3>
+
+
+
+<p>После установки плагина в меню настроек появится новый пункт меню <strong>Добавить категории</strong>. Зайдите в него и выберите нужные дополнительные категории: TV Show стриминги, LME Collections, Мультфильмы, Документалки.</p>
+
+
+
+<p>После выбора перезапустите приложение Lampa. В левом меню появятся новые категории.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1344" height="795" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-20.png" alt="" class="wp-image-19224" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-20.png 1344w, https://tv-ch.ru/wp-content/uploads/2024/12/image-20-768x454.png 768w" sizes="auto, (max-width: 1344px) 100vw, 1344px"></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://lampame.github.io/main/nc/nc.js" target="_blank" rel="noopener">https://lampame.github.io/main/nc/nc.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'dopolnitelnye_istochniki',
+            text: `<h3 class="wp-block-heading" id="12-dopolnitelnye-istochniki">Дополнительные источники</h3>
+
+
+
+<p>Зайдите в <strong>Настройки</strong> (шестерёнка), выберите <strong>Остальное</strong> (в самом низу), затем <strong>Основной Источник</strong>. У вас появится 2 дополнительных источника <strong>KP</strong> (КиноПоиск) и <strong>FILMIX</strong>. Даже <strong>CUB</strong> вроде начинает работать.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1047" height="555" src="https://tv-ch.ru/wp-content/uploads/2025/03/image-3.png" alt="Дополнительные источники" class="wp-image-19956" srcset="https://tv-ch.ru/wp-content/uploads/2025/03/image-3.png 1047w, https://tv-ch.ru/wp-content/uploads/2025/03/image-3-768x407.png 768w" sizes="auto, (max-width: 1047px) 100vw, 1047px"><figcaption class="wp-element-caption">Дополнительные источники</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/source.js" target="_blank" rel="noopener">https://bylampa.github.io/source.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'start',
+            text: `<h3 class="wp-block-heading" id="13-start">Start</h3>
+
+
+
+<p>Если нет постеров в Lampa, то пробуйте данный плагин. Альтернатива плагина <a href="/lampa-interface/#1-tmdb-proxy">TMDB Proxy</a>. Вроде как, плагин позволяет заходить на заблокированные карточки.</p>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/start.js" target="_blank" rel="noopener">https://bylampa.github.io/start.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'zolotaya_tema',
+            text: `<h3 class="wp-block-heading" id="14-zolotaya-tema">Золотая тема</h3>
+
+
+
+<p>Плагин должен включить какую-то золотую тему. Лично у меня просто появился жёлто-коричневый оттенок фона.</p>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bazzzilius.github.io/scripts/gold_theme.js" target="_blank" rel="noopener">https://bazzzilius.github.io/scripts/gold_theme.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'poisk_kontsertov',
+            text: `<h3 class="wp-block-heading" id="15-poisk-kontsertov">Поиск концертов</h3>
+
+
+
+<p>Добавляет в левом меню пункт Concert Search. Плагин требует установки торрента и рабочего адреса Jakett. Работает со сбоями.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1087" height="672" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-21.png" alt="Поиск концертов" class="wp-image-19231" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-21.png 1087w, https://tv-ch.ru/wp-content/uploads/2024/12/image-21-768x475.png 768w" sizes="auto, (max-width: 1087px) 100vw, 1087px"><figcaption class="wp-element-caption">Поиск концертов</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://lampame.github.io/main/cts.js" target="_blank" rel="noopener">https://lampame.github.io/main/cts.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'lme_shikimori',
+            text: `<h3 class="wp-block-heading" id="17-lme-shikimori">LME Shikimori</h3>
+
+<p>Отображает информацию по Аниме с ресурса Shikimori. Также пытается найти по оригинальному названию на TMDB. Если найдено множество результатов, то покажет меню с выбором.</p>
+
+<p>Адрес плагина:</p>
+
+<p><a href="https://lampame.github.io/main/shikimori.js" target="_blank" rel="noopener">https://lampame.github.io/main/shikimori.js</a> (для любой Lampa)</p>`
+        },
+        
+        {
+            id: 'remove_ts_1',
+            text: `<h3 class="wp-block-heading" id="17-remove-ts">Remove TS</h3>
+
+
+
+<p>Убирает с главного экрана постеры (карточки) с качеством TS (экранки).</p>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p class="has-vivid-red-color has-text-color has-link-color wp-elements-5515bda96bdfafa02d70d3f8b04a6c10">http://193.233.134.21/plugins/nots (для любой Lampa)<br>Проверил 23.06.2025г., перестал грузится.</p>`
+        },
+        {
+            id: 'russkie_novinki',
+            text: `<h3 class="wp-block-heading" id="18-russkie-novinki">Русские новинки</h3>
+
+
+
+<p>Добавляет в левом меню пункт <strong>Русское</strong> в котором будут <strong>Русские фильмы</strong>, <strong>Русские сериалы</strong>, <strong>Русские мультфильмы</strong>. Также можно увидеть подборки сервисов Start, Premier, KION, ИВИ, Okko, КиноПоиск, Wink, TV СТС, TV ТНТ.</p>
+
+
+
+<p>Рекомендую, если достаточно оперативной памяти.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1333" height="819" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-22.png" alt="Русские новинки" class="wp-image-19234" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-22.png 1333w, https://tv-ch.ru/wp-content/uploads/2024/12/image-22-768x472.png 768w" sizes="auto, (max-width: 1333px) 100vw, 1333px"><figcaption class="wp-element-caption">Русские новинки</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/rus_movie.js" target="_blank" rel="noopener">https://bylampa.github.io/rus_movie.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'podborki',
+            text: `<h3 class="wp-block-heading" id="19-podborki">Подборки</h3>
+
+
+
+<p>После этого плагина Вам не нужно будет заходить в другие онлайн-кинотеатры. Теперь прямо в Lampa можно смотреть подборки таких сервисов как: Okko, Кинопоиск, ИВИ, Wink, KION, Start, Netflix. Кроме этого добавлены такие пункты как Русские, В качестве, Дорамы (про последнее я не знаю что это, но там что-то азиатское).</p>
+
+
+
+<p>Lampa от разработчиков нужно зайти в Настройки (шестерёнка), внизу появится пункт Подборки. Включить, что нужно. Перестал работать в Lampa UNCENSORED.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="768" height="587" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-45.png" alt="Подборки в Lampa от разработчиков" class="wp-image-19903"><figcaption class="wp-element-caption">Подборки в Lampa от разработчиков</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="789" height="594" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-44.png" alt="Подборки" class="wp-image-19531" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-44.png 789w, https://tv-ch.ru/wp-content/uploads/2024/12/image-44-768x578.png 768w" sizes="auto, (max-width: 789px) 100vw, 789px"><figcaption class="wp-element-caption">Подборки</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://lampaplugins.github.io/store/p.js" target="_blank" rel="noopener">https://lampaplugins.github.io/store/p.js</a> (Lampa от разработчиков)</p>`
+        },
+        {
+            id: 'v_kachestve',
+            text: `<h3 class="wp-block-heading" id="20-v-kachestve">В качестве</h3>
+
+
+
+<p>В левое меню добавляет пункт В качестве, в котором будут отображаться новые фильмы и с качеством 4K (UltraHD). Рекомендую обладателям телевизоров с поддержкой HDR.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="981" height="663" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-23.png" alt="В качестве 4K" class="wp-image-19238" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-23.png 981w, https://tv-ch.ru/wp-content/uploads/2024/12/image-23-768x519.png 768w" sizes="auto, (max-width: 981px) 100vw, 981px"><figcaption class="wp-element-caption">В качестве 4K</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/in_quality.js" target="_blank" rel="noopener">https://bylampa.github.io/in_quality.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'sneg',
+            text: `<h3 class="wp-block-heading" id="21-sneg">Снег</h3>
+
+
+
+<p>Анимация падающего снега. Включить и выключить можно зайдя в <strong>Настройки</strong> и выбрать пункт <strong>Интерфейс</strong>.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1159" height="544" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-24.png" alt="Плагин Lampa Снег" class="wp-image-19241" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-24.png 1159w, https://tv-ch.ru/wp-content/uploads/2024/12/image-24-768x360.png 768w" sizes="auto, (max-width: 1159px) 100vw, 1159px"><figcaption class="wp-element-caption">Плагин Lampa Снег</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/snow.js" target="_blank" rel="noopener">https://bylampa.github.io/snow.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'logo_vmesto_nazvaniya',
+            text: `<h3 class="wp-block-heading" id="22-logo-vmesto-nazvaniya">Лого Вместо Названия</h3>
+
+
+
+<p>В карточке фильма показывает Логотип (фирменное написание) вместо буквенного написания. Смотрится неплохо. Если оперативки достаточно, устанавливайте.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="907" height="596" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-25.png" alt="Лого Вместо Названия" class="wp-image-19242" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-25.png 907w, https://tv-ch.ru/wp-content/uploads/2024/12/image-25-768x505.png 768w" sizes="auto, (max-width: 907px) 100vw, 907px"><figcaption class="wp-element-caption">Лого Вместо Названия</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://lampaplugins.github.io/store/logo.js" target="_blank" rel="noopener">https://lampaplugins.github.io/store/logo.js</a> (Lampa от разработчиков)<br><a href="https://bylampa.github.io/logo_title.js" target="_blank" rel="noopener">https://bylampa.github.io/logo_title.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'trakttv',
+            text: `<h3 class="wp-block-heading" id="23-trakttv">TraktTV</h3>
+
+
+
+<p>Добавляет в меню <strong>Настройки</strong> пункт <strong>Trakt.TV</strong> (сервис по подбору фильмов). Не могу дать рекомендацию, поскольку не пользуюсь данным сервисом. Если кто-то пользуется и сумел настроить, напишите в комментариях.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="830" height="564" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-26.png" alt="Trakt.TV" class="wp-image-19243" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-26.png 830w, https://tv-ch.ru/wp-content/uploads/2024/12/image-26-768x522.png 768w" sizes="auto, (max-width: 830px) 100vw, 830px"><figcaption class="wp-element-caption">Trakt.TV</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://lampame.github.io/main/trakttv.js" target="_blank" rel="noopener">https://lampame.github.io/main/trakttv.js</a> (Lampa от разработчиков)</p>`
+        },
+        {
+            id: 'nastroika_shapki',
+            text: `<h3 class="wp-block-heading" id="24-nastroyka-shapki">Настройка шапки</h3>
+
+
+
+<p>После установки плагина нужно зайти в меню <strong>Настройки</strong>, затем <strong>Интерфейс</strong>. Там появится пункт <strong>Шапка</strong>. В нём можно включать и отключать отображение значков Поиск, Настройки, Премиум, Профиль, Новости, Уведомления и т.д.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="756" height="588" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-27.png" alt="Настройка шапки Lampa" class="wp-image-19244"><figcaption class="wp-element-caption">Настройка шапки Lampa</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://and7ey.github.io/lampa/head_filter.js" target="_blank" rel="noopener">https://and7ey.github.io/lampa/head_filter.js</a> (для любой Lampa)<br>https://lampaplugins.github.io/store/logo.js (Lampa от разработчиков)</p>`
+        },
+        {
+            id: 'cardify',
+            text: `<h3 class="wp-block-heading" id="25-cardify">Cardify</h3>
+
+
+
+<p>Изменят внешний вид карточек. Больше внимания на постер. В последней версии перестал работать.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1457" height="773" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-28.png" alt="Cardify" class="wp-image-19245" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-28.png 1457w, https://tv-ch.ru/wp-content/uploads/2024/12/image-28-768x407.png 768w" sizes="auto, (max-width: 1457px) 100vw, 1457px"><figcaption class="wp-element-caption">Cardify</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/cardify.js" target="_blank" rel="noopener">https://bylampa.github.io/cardify.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'menu_vykhod',
+            text: `<h3 class="wp-block-heading" id="26-menyu-vykhod">Меню выход</h3>
+
+
+
+<p>Плагин подменят меню выход на своё. Можно включить или выключить в настройках, раздел Остальное, пункт меню Выход.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="772" height="543" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-46.png" alt="Меню выход" class="wp-image-19913" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-46.png 772w, https://tv-ch.ru/wp-content/uploads/2024/12/image-46-768x540.png 768w" sizes="auto, (max-width: 772px) 100vw, 772px"><figcaption class="wp-element-caption">Меню выход</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/backmenu.js" target="_blank" rel="noopener">https://bylampa.github.io/backmenu.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'moi_temy',
+            text: `<h3 class="wp-block-heading" id="27-moi-temy">Мои темы</h3>
+
+
+
+<p>Изменят палитру приложения Lampa. Зайдите в <strong>Настройки</strong>, раздел <strong>Интерфейс</strong>, найдите пункт <strong>Мои темы</strong>. Чтобы вернуть стандарты интерфейс, удалите любую из тем.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1303" height="791" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-30.png" alt="Мои темы" class="wp-image-19247" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-30.png 1303w, https://tv-ch.ru/wp-content/uploads/2024/12/image-30-768x466.png 768w" sizes="auto, (max-width: 1303px) 100vw, 1303px"><figcaption class="wp-element-caption">Мои темы</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/themes.js" target="_blank" rel="noopener">https://bylampa.github.io/themes.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'zarubezhnye_podborki',
+            text: `<h3 class="wp-block-heading" id="28-zarubezhnye-podborki">Зарубежные подборки</h3>
+
+
+
+<p>Добавляет в левом (главном) меню пункт <strong>Зарубежное</strong>.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1409" height="541" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-42.png" alt="Зарубежные подборки" class="wp-image-19298" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-42.png 1409w, https://tv-ch.ru/wp-content/uploads/2024/12/image-42-768x295.png 768w" sizes="auto, (max-width: 1409px) 100vw, 1409px"><figcaption class="wp-element-caption">Зарубежные подборки</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/inter_movie.js" target="_blank" rel="noopener">https://bylampa.github.io/inter_movie.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'reiting_lampa',
+            text: `<h3 class="wp-block-heading" id="29-reyting-lampa">Рейтинг Lampa</h3>
+
+
+
+<p>В карточке фильма добавляет рейтинг пользователей Lampa.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1123" height="504" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-43.png" alt="Рейтинг Lampa" class="wp-image-19299" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-43.png 1123w, https://tv-ch.ru/wp-content/uploads/2024/12/image-43-768x345.png 768w" sizes="auto, (max-width: 1123px) 100vw, 1123px"><figcaption class="wp-element-caption">Рейтинг Lampa</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/rate_lampa.js" target="_blank" rel="noopener">https://bylampa.github.io/rate_lampa.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'reiting_cub_v_kartochke_filma',
+            text: `<h3 class="wp-block-heading" id="30-reyting-cub-v-kartochke-filma">Рейтинг CUB в карточке фильма</h3>
+
+
+
+<p>В интерфейсе карточек появляется рейтинг от сервиса CUB.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="700" height="504" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-58.png" alt="Рейтинг CUB в карточке фильма" class="wp-image-20020"></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://plugin.rootu.top/cub-rating.js" target="_blank" rel="noopener">https://plugin.rootu.top/cub-rating.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'status_na_staroy_kartochke',
+            text: `<h3 class="wp-block-heading" id="31-status-na-staroy-kartochke">Статус на старой карточке</h3>
+
+
+
+<p>Плагин для тех, кто пользуется старым интерфейсом (в настройках пункт <strong>Интерфейс карточек</strong>). Добавляет статус видео. В новом интерфейсе ничего не изменится.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1082" height="499" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-48.png" alt="" class="wp-image-19917" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-48.png 1082w, https://tv-ch.ru/wp-content/uploads/2024/12/image-48-768x354.png 768w" sizes="auto, (max-width: 1082px) 100vw, 1082px"></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/old_card_status.js" target="_blank" rel="noopener">https://bylampa.github.io/old_card_status.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'sostoyanie_seriala',
+            text: `<h3 class="wp-block-heading" id="32-sostoyanie-seriala">Состояние Сериала</h3>
+
+
+
+<p>Отображает текущее состояние сериала в карточке. Сезон и серия. Отключить и включить можно в настройках Интерфейса.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1014" height="542" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-47.png" alt="Состояние Сериала" class="wp-image-19916" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-47.png 1014w, https://tv-ch.ru/wp-content/uploads/2024/12/image-47-768x411.png 768w" sizes="auto, (max-width: 1014px) 100vw, 1014px"><figcaption class="wp-element-caption">Состояние Сериала</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/seas_and_eps.js" target="_blank" rel="noopener">https://bylampa.github.io/seas_and_eps.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'anime',
+            text: `<h3 class="wp-block-heading" id="34-anime">Аниме</h3>
+
+<p>Добавляет в левое меню пункт Аниме. Это подборки от TMDB.</p>
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1070" height="510" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-49.png" alt="Аниме" class="wp-image-19918" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-49.png 1070w, https://tv-ch.ru/wp-content/uploads/2024/12/image-49-768x366.png 768w" sizes="auto, (max-width: 1070px) 100vw, 1070px"><figcaption class="wp-element-caption">Аниме</figcaption></figure>
+
+<p>Адрес плагина:</p>
+
+<p><a href="https://bylampa.github.io/anime.js" target="_blank" rel="noopener">https://bylampa.github.io/anime.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'moi_zakladki',
+            text: `<h3 class="wp-block-heading" id="34-moi-zakladki">Мои закладки</h3>
+
+
+
+<p>Плагин позволяет создавать свои папки в <strong>Закладках</strong>.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="959" height="334" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-51.png" alt="Мои закладки" class="wp-image-19920" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-51.png 959w, https://tv-ch.ru/wp-content/uploads/2024/12/image-51-768x267.png 768w" sizes="auto, (max-width: 959px) 100vw, 959px"><figcaption class="wp-element-caption">Мои закладки</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/my_bookmarks.js" target="_blank" rel="noopener">https://bylampa.github.io/my_bookmarks.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'tsvetnye_otsenki',
+            text: `<h3 class="wp-block-heading" id="35-tsvetnye-otsenki">Цветные оценки</h3>
+
+
+
+<p>Оценки на постерах. Красный — фигня полная. Жёлтый — можно разок глянуть. Синий — стоит посмотреть. Зелёный — шедевры.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1308" height="661" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-52.png" alt="Цветные оценки" class="wp-image-19922" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-52.png 1308w, https://tv-ch.ru/wp-content/uploads/2024/12/image-52-768x388.png 768w" sizes="auto, (max-width: 1308px) 100vw, 1308px"><figcaption class="wp-element-caption">Цветные оценки</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://bylampa.github.io/color_vote.js" target="_blank" rel="noopener">https://bylampa.github.io/color_vote.js</a> (Lampa UNCENSORED)</p>`
+        },
+        {
+            id: 'treilery_itunes',
+            text: `<h3 class="wp-block-heading" id="36-treylery-itunes">Трейлеры Itunes</h3>
+
+
+
+<p>Позволяет из карточки смотреть трейлеры из Itunes.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="811" height="438" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-53.png" alt="Трейлеры Itunes" class="wp-image-19924" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-53.png 811w, https://tv-ch.ru/wp-content/uploads/2024/12/image-53-768x415.png 768w" sizes="auto, (max-width: 811px) 100vw, 811px"><figcaption class="wp-element-caption">Трейлеры Itunes</figcaption></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://plugin.rootu.top/trailers.js" target="_blank" rel="noopener">https://plugin.rootu.top/trailers.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'aviamovie_surs',
+            text: `<h3 class="wp-block-heading" id="37-aviamovie-surs">Aviamovie Surs</h3>
+
+
+
+<p>После установки плагина, зайдите в <strong>Настройки</strong> (шестерёнка), найдите пункт <strong>Подборки AVIAMOVIE</strong> и добавьте нужную подборку в боковое меню.</p>
+
+
+
+<p>Вы получите уникальные подборки фильмов.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1554" height="619" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-54.png" alt="Плагин Aviamovie Surs" class="wp-image-19996" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-54.png 1554w, https://tv-ch.ru/wp-content/uploads/2024/12/image-54-768x306.png 768w, https://tv-ch.ru/wp-content/uploads/2024/12/image-54-1536x612.png 1536w" sizes="auto, (max-width: 1554px) 100vw, 1554px"></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://aviamovie.github.io/surs.js" target="_blank" rel="noopener">https://aviamovie.github.io/surs.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'fiksirovannyy_razmer',
+            text: `<h3 class="wp-block-heading" id="38-fiksirovannyy-razmer">Фиксированный размер</h3>
+
+
+
+<p>Интерфейс Lampa станет крупнее. Если у Вас маленький телевизор или плохое зрение — самое оно!</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1426" height="852" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-56.png" alt="Фиксированный размер" class="wp-image-20001" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-56.png 1426w, https://tv-ch.ru/wp-content/uploads/2024/12/image-56-768x459.png 768w" sizes="auto, (max-width: 1426px) 100vw, 1426px"></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://nb557.github.io/plugins/fix_size.js" target="_blank" rel="noopener">https://nb557.github.io/plugins/fix_size.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'statistika_1',
+            text: `<h3 class="wp-block-heading" id="39-statistika">Статистика</h3>
+
+
+
+<p>После установки плагина в <strong>Настройках</strong> (шестерёнка) появится пункт <strong>Статистика</strong>. Требуется время для формирования статистики (просто пользуйтесь Лампой как обычно в течение некоторого времени). Итоги года доступны с 14 декабря по 15 января.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="917" height="661" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-57.png" alt="Статистика" class="wp-image-20002" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-57.png 917w, https://tv-ch.ru/wp-content/uploads/2024/12/image-57-768x554.png 768w" sizes="auto, (max-width: 917px) 100vw, 917px"></figure>
+
+
+
+<p>Адрес плагина:</p>
+
+
+
+<p><a href="https://and7ey.github.io/lampa/stats.js" target="_blank" rel="noopener">https://and7ey.github.io/lampa/stats.js</a> (для любой Lampa)</p>`
+        },
+        {
+            id: 'dlna_tizen_orsay',
+            text: `1`
+        },
+        {
+            id: 'aaa',
+            text: ``
+        },
+        {
+            id: 'aaa',
+            text: ``
+        },
+        {
+            id: 'aaa',
+            text: ``
+        },
+        {
+            id: 'aaa',
+            text: ``
+        },
+
+
+
+        ///////////////// Ypravlenie //////////////////
+        {
             id: 'vykhod',
             text: `<h3 class="wp-block-heading" id="1-vykhod">Выход</h3>
 
@@ -102,28 +763,8 @@ const articlesJson = {
 
 <p><a href="https://nnmdd.github.io/lampa_hotkeys/hotkeys.js" target="_blank" rel="noopener">https://nnmdd.github.io/lampa_hotkeys/hotkeys.js</a> (для любой Lampa)</p>`
         },
-        {
-            id: 'anime',
-            text: `<h3 class="wp-block-heading" id="34-anime">Аниме</h3>
-
-<p>Добавляет в левое меню пункт Аниме. Это подборки от TMDB.</p>
-
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1070" height="510" src="https://tv-ch.ru/wp-content/uploads/2024/12/image-49.png" alt="Аниме" class="wp-image-19918" srcset="https://tv-ch.ru/wp-content/uploads/2024/12/image-49.png 1070w, https://tv-ch.ru/wp-content/uploads/2024/12/image-49-768x366.png 768w" sizes="auto, (max-width: 1070px) 100vw, 1070px"><figcaption class="wp-element-caption">Аниме</figcaption></figure>
-
-<p>Адрес плагина:</p>
-
-<p><a href="https://bylampa.github.io/anime.js" target="_blank" rel="noopener">https://bylampa.github.io/anime.js</a> (Lampa UNCENSORED)</p>`
-        },
-        {
-            id: 'lme_shikimori',
-            text: `<h3 class="wp-block-heading" id="17-lme-shikimori">LME Shikimori</h3>
-
-<p>Отображает информацию по Аниме с ресурса Shikimori. Также пытается найти по оригинальному названию на TMDB. Если найдено множество результатов, то покажет меню с выбором.</p>
-
-<p>Адрес плагина:</p>
-
-<p><a href="https://lampame.github.io/main/shikimori.js" target="_blank" rel="noopener">https://lampame.github.io/main/shikimori.js</a> (для любой Lampa)</p>`
-        },
+        
+        
 
 
         //Online-watching
@@ -540,7 +1181,7 @@ const articlesJson = {
         },
 
 
-        // Klubnichka
+        /////////////////// Klubnichka ////////////////////
         {
             id: 'klubnichka',
             text: `<h3 class="wp-block-heading" id="1-klubnichka">Клубничка</h3>
